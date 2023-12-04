@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
 export default async function PostsPage() {
-    const res = await fetch('http://localhost:3000/api/posts');
+    console.log(process.env.VERCEL_URL)
+    const res = await fetch(`https://${NEXT_PUBLIC_VERCEL_URL}/api/posts`);
     const { posts } = await res.json();
 
     return (
