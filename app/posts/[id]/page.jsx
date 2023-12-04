@@ -15,7 +15,7 @@ export default function SinglePost({params}) {
 
   useEffect(() => {
     fetchPost(params.id);
-  }, [])
+  }, [params.id])
   
   return (
     <div style={{ paddingTop: '20px', paddingLeft: '20px' }}>
