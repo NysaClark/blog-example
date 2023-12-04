@@ -7,7 +7,8 @@ export default function SinglePost({params}) {
   const [post, setPost] = useState(null);
 
   const fetchPost = async (id) => {
-    const res = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/posts/${id}`);
+    // const res = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/posts/${id}`);
+    const res = await fetch(`http://localhost:3000/api/posts`)
     const {post} = await res.json();
 
     post && setPost(post);
